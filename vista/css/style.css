@@ -120,7 +120,7 @@ form div.botones {
 		outline: none;
 	}
 
-	form input:focus {
+	form input[type="text"]:focus {
 		width: 200%;
 	}
 

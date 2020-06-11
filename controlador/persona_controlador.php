@@ -26,8 +26,9 @@
 		}
 
 		public function edit($id) {
+			$persona = new Persona_modelo();
+			$datos = $persona->obtenerDatos($id);
 			if(isset($_POST['btnActualizar'])){
-				$persona = new Persona_modelo();
 				$persona->editarPersona($id,$_POST['Per_Nombre'],$_POST['Per_Apellido'],$_POST['Per_Edad'],$_POST['Per_Genero'],$_POST['Per_Correo']);
 			}
 			require_once "vista/edit_view.phtml";

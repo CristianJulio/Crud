@@ -50,6 +50,29 @@
 			}
 		}
 
+		public function obtenerDatos($id) {
+			$sql = ("select * from persona where Per_Id=".$_GET['id']);
+			$conexion = Conexion::conectar();
+			$resultado = $conexion->Query($sql);
+
+			$nombre;
+			$apellido;
+			$edad;
+			$genero;
+			$correo;
+			$datos = [];
+
+			while($dato = $resultado->fetch_assoc()) {
+				$datos[] = $nombre = $dato['Per_Nombre'];
+				$datos[] = $apellido = $dato['Per_Apellido'];
+				$datos[] = $edad = $dato['Per_Edad'];
+				$datos[] = $genero = $dato['Per_Genero'];
+				$datos[] = $correo = $dato['Per_Correo'];
+			}
+
+			return $datos;
+		}
+
 		public function eliminarPersona($id) {
 			$sql = ("delete from persona where Per_Id = $id");
 			$resultado = $this->conexion->Query($sql);

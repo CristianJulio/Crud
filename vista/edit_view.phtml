@@ -1,32 +1,41 @@
-<header>
-	<a href="index.php">Home</a>
-	<h1>Lista de personas</h1>
-</header>
-<form action="index.php?accion=edit&id=<?php echo $_GET['id'] ?>" method="post">
-	<table>
-		<tr>
-			<td><label for="Per_Nombre">Nombre:</label></td>
-			<td><input type="text" name="Per_Nombre" id="Per_Nombre" autocomplete="off" autofocus></td>
-		</tr>
-		<tr>
-			<td><label for="Per_Apellido">Apellido:</label></td>
-			<td><input type="text" name="Per_Apellido" id="Per_Apellido" autocomplete="off"></td>
-		</tr>
-		<tr>
-			<td><label for="Per_Edad">Edad:</label></td>
-			<td><input type="text" name="Per_Edad" id="Per_Edad" autocomplete="off"></td>
-		</tr>
-		<tr>
-			<td><label for="Per_Genero">Genero:</label></td>
-			<td><input type="text" name="Per_Genero" id="Per_Genero" autocomplete="off"></td>
-		</tr>
-		<tr>
-			<td><label for="Per_Correo">Correo:</label></td>
-			<td><input type="text" name="Per_Correo" id="Per_Correo" autocomplete="off"></td>
-		</tr>
-	</table>
-	<div class="botones">
-		<td><input type="submit" name="btnActualizar" id="btnActualizar" value="Actualizar"></td>
-		<input type="reset" name="btnReset" id="btnReset">
-	</div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crud</title>
+	<link rel="stylesheet" href="vista/css/style.css">
+</head>
+<body>
+	<header>
+		<a href="index.php">Home</a>
+		<h1>Lista de personas</h1>
+	</header>
+	<form action="index.php?accion=edit&id=<?php echo $_GET['id'] ?>" method="post">
+		<table>
+			<tr>
+				<td><label for="Per_Nombre">Nombre:</label></td>
+				<td><input type="text" name="Per_Nombre" id="Per_Nombre" value="<?php echo $datos[0]; ?>" autocomplete="off" autofocus></td>
+			</tr>
+			<tr>
+				<td><label for="Per_Apellido">Apellido:</label></td>
+				<td><input type="text" name="Per_Apellido" id="Per_Apellido" value="<?php echo $datos[1]; ?>" autocomplete="off"></td>
+			</tr>
+			<tr>
+				<td><label for="Per_Edad">Edad:</label></td>
+				<td><input type="text" name="Per_Edad" id="Per_Edad" value="<?php echo $datos[2]; ?>" autocomplete="off"></td>
+			</tr>
+			<tr>
+				<td><label for="Per_Genero">Genero:</label></td>
+				<td><input type="text" name="Per_Genero" id="Per_Genero" value="<?php echo $datos[3]; ?>" autocomplete="off"></td>
+			</tr>
+			<tr>
+				<td><label for="Per_Correo">Correo:</label></td>
+				<td><input type="text" name="Per_Correo" id="Per_Correo" value="<?php echo $datos[4]; ?>" autocomplete="off"></td>
+			</tr>
+		</table>
+		<div class="botones">
+			<input type="submit" name="btnActualizar" id="btnActualizar" value="Actualizar">
+		</div>
+	</form>
+</body>
+</html>
