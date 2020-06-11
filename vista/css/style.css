@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*********************     GLOBAL    *************/
+
+body, html {
+	background: #FFF2E5;
+	font-family: helvetica, neue;
+	letter-spacing: .5px;
+}
+
+a {
+	text-decoration: none;
+}
+/************************************************/
+
+header {
+	align-items: center;
+	background: #CD5C5C;
+	display: flex;
+	font-style: italic;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+	header h1 {
+		color: #fff;
+		padding: 10px 0;
+		text-align: center;
+		width: 90%;
+	}
+
+	header a {
+		color: #fff;
+		font-weight: bold;
+	}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+	table tr td, thead th {
+		padding:10px 10px;
+	}
+
+	table thead th {
+		background: #FA8072;
+		color: #fff;
+		font-style: italic;
+	}
+
+	table a {
+		color: #666666;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+	}
+
+div.links {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	width: 100%;
+}
+
+	div.links a {
+		background: #FA8072;
+		border-radius: 10px;
+		box-shadow: 2px 2px 2px #333;
+		color: #fff;
+		margin-right: 10px;
+		padding: 5px 15px;
+		text-align: center;
+		transition: all .3s;
+	}
+
+form .botones input[type="submit"], input[type="reset"] {
+	background: #CD5C5C;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-style: italic;
+	font-weight: bold;
+	padding: 10px 0;
+	width: 100px;
+}
+
+form div.botones {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+	form div.botones input {
+		box-shadow: 2px 2px 2px #333;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 30px;
+		outline: none;
+		transition: all .3s;
+	}
+
+	form div.botones input:hover, div.links a:hover {
+		box-shadow: 2px -2px 2px #333;
+	}
+
+	form input {
+		width: 250px;
+		border: none;
+		padding: 2px 2px;
+		transition: all .3s ease-in;
+		background: none;
+		border-bottom: 1px solid #333;
+		shape-outside: none;
+		outline: none;
+	}
+
+	form input:focus {
+		width: 200%;
+	}
+
+	form table tr td {
+		padding: 15px 10px;
+	}
